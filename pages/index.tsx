@@ -1,85 +1,80 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import useTranslation from 'next-translate/useTranslation';
 
 const Home: NextPage = () => {
+  const { t: common } = useTranslation('common');
+  const { t: landing } = useTranslation('landing');
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center py-2">
+    <>
       <Head>
-        <title>Create Next App</title>
+        <title>{common('title')}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
-        <h1 className="text-6xl font-bold">
-          Welcome to{' '}
-          <a className="text-blue-600" href="https://nextjs.org">
-            Next.js!
-          </a>
-        </h1>
+      <main className="flex flex-col items-center w-full justify-center text-center">
+        <section className="py-20 space-y-3 pb-32">
+          <p className="font-bold text-gray-300">{landing('banner.subtitle')}</p>
+          <h1 className="text-5xl font-bold">{landing('banner.title')}</h1>
+          <button className="rounded-full p-2 w-56 border-2 font-bold border-black">
+            {landing('banner.button')}
+          </button>
+        </section>
 
-        <p className="mt-3 text-2xl">
-          Get started by editing{' '}
-          <code className="rounded-md bg-gray-100 p-3 font-mono text-lg">
-            pages/index.tsx
-          </code>
-        </p>
+        <section className="flex justify-between w-full h-[600px] px-20">
+          <Image 
+            alt="" 
+            className='rounded-xl w-1/2 shadow-lg'
+            src="https://images.unsplash.com/photo-1670140274562-2496ccaa5271?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" 
+            width={300}
+            height={200} 
+          />
+          <article className="flex text-left w-1/3 flex-col space-y-4">
+            <h1 className="text-4xl font-bold">Name of 3D Print</h1>
+            <div className='flex items-center justify-between'>
+              <figure className="flex space-x-3">
+                <Image
+                  alt=""
+                  className="rounded-full"
+                  src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80"
+                  width={50}
+                  height={50}
+                />
+                <figcaption className="flex flex-col justify-center">
+                  <p className="font-bold text-sm text-gray-300">{landing('banner.creator')}</p>
+                  <p className="text-xl font-bold">Location</p>
+                </figcaption>
+              </figure>
+              <figure className="flex items-center space-x-3">
+                <figure className="h-12 w-12 rounded-full bg-primary-600">
 
-        <div className="mt-6 flex max-w-4xl flex-wrap items-center justify-around sm:w-full">
-          <a
-            href="https://nextjs.org/docs"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Find in-depth information about Next.js features and its API.
-            </p>
-          </a>
+                </figure>
+                <figcaption className="flex flex-col justify-center">
+                  <p className="font-bold text-sm text-gray-300">{landing('banner.price')}</p>
+                  <p className="text-xl font-bold">1.23 RZR</p>
+                </figcaption>
+              </figure>
+            </div>
+            <article className=" flex flex-col items-center space-y-5 h-[300px] p-4 w-full rounded-lg bg-primary-200">
+              <p className="font-bold">3D Model</p>
+              <h1 className="text-4xl font-bold">1.00 RZR</h1>
+              <h3>$3,000</h3>
+              <h2 className="text-gray-400">{landing('banner.bid.auction')}</h2>
+            </article>
 
-          <a
-            href="https://nextjs.org/learn"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Learn &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Learn about Next.js in an interactive course with quizzes!
-            </p>
-          </a>
+            <button className="rounded-full p-2 text-white w-full bg-primary-600 font-bold">
+              {landing('banner.bid.button1')}
+            </button>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Examples &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Discover and deploy boilerplate example Next.js projects.
-            </p>
-          </a>
+            <button className="rounded-full p-2 w-full border-2 font-bold border-black">
+              {landing('banner.bid.button2')}
+            </button>
 
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Deploy &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
+          </article>
+        </section>
       </main>
-
-      <footer className="flex h-24 w-full items-center justify-center border-t">
-        <a
-          className="flex items-center justify-center gap-2"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-        </a>
-      </footer>
-    </div>
+    </>
   )
 }
 

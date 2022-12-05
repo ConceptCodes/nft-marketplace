@@ -1,0 +1,15 @@
+{
+  "banner": {
+    "subtitle": "Create, Explore  & Collect Digital NFT’s",
+    "title": "The new creative economy.",
+    "button": "Start your search",
+    "creator": "Creator",
+    "price": "Instant Price",
+    "bid": {
+      "subtitle": "Current Bid",
+      "auction": "Auction ending in",
+      "button1": "Place a bid",
+      "button2": "View Item"
+    }
+  }
+}

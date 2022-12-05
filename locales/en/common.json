@@ -1,0 +1,13 @@
+{
+  "title": "NFT Marketplace",
+  "navbar": {
+    "links": {
+      "discover": "Discover",
+      "howItWorks": "How it works",
+      "upload": "Upload"
+    },
+    "popularSellers": {
+      "title": "Popular sellers"
+    }
+  }
+}
