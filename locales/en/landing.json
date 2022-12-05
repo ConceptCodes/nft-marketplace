@@ -11,5 +11,12 @@
       "button1": "Place a bid",
       "button2": "View Item"
     }
+  },
+  "popularSellers": {
+    "title": "Popular sellers"
+  },
+  "trendingCollections": {
+    "title": "Trending Collections",
+    "items": "Items"
   }
 }

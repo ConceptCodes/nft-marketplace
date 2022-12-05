@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         : ChainId.Mainnet
     }
   >
-    <div className="flex min-h-screen flex-col items-center p-3">
+    <div className="flex min-h-screen flex-col">
       <Navbar />
       <Component {...pageProps} />
     </div>

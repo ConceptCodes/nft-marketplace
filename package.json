@@ -8,15 +8,18 @@
   "dependencies": {
     "@tailwindcss/forms": "^0.5.3",
     "@tailwindcss/typography": "^0.5.8",
+    "@thirdweb-dev/auth": "^2.0.36",
     "@thirdweb-dev/react": "^3.6.6",
     "@thirdweb-dev/sdk": "^3.6.6",
     "ethers": "^5.7.2",
     "next": "latest",
+    "next-auth": "^4.18.0",
     "next-translate": "^1.6.0",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
   "devDependencies": {
+    "@svgr/webpack": "^6.5.1",
     "@types/node": "18.11.3",
     "@types/react": "18.0.21",
     "@types/react-dom": "18.0.6",
