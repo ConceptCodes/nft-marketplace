@@ -5,5 +5,6 @@ module.exports = {
     '*': ['common'], 
     '/': ['landing'],
     '/how-it-works': ['howItWorks'],
+    '/upload': ['upload'],
   },
 };

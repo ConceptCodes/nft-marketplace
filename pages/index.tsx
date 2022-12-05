@@ -84,10 +84,10 @@ const Home: NextPage = () => {
             <section className="object-none object-right">
               <div className="flex space-x-3">
                 <button className="">
-                  <Icon name="arrow-left" />
+                  <Icon name="arrow-left" color="black" size="medium" />
                 </button>
                 <button className="">
-                  <Icon name="arrow-right" />
+                  <Icon name="arrow-right" color="black" size="medium" />
                 </button>
               </div>
             </section>
