@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import useTranslation from 'next-translate/useTranslation'
+import Link from  'next/link'
 
 interface ICardProps {
   title: string
@@ -10,16 +11,18 @@ interface ICardProps {
 
 const Card: React.FC<ICardProps> = ({ title, imgSrc }) => {
   return (
-    <div className="flex flex-col hover:border-primary-600 items-center border-2 p-4 justify-center w-[200px] lg:w-[300px] rounded-lg">
-      <Image
-        src={imgSrc}
-        alt={title}
-        width={200}
-        height={200}
-        className="rounded-lg lg:w-[300px] lg:h-[300px]"
-      />
-      <button className="mt-2 text-lg p-3 rounded-full border-2 font-bold">{title}</button>
-    </div>
+    <Link href={`/upload/${title.toLowerCase()}`}>
+      <div className="flex flex-col hover:border-primary-600 items-center border-2 p-4 justify-center w-[200px] lg:w-[300px] rounded-lg">
+        <Image
+          src={imgSrc}
+          alt={title}
+          width={200}
+          height={200}
+          className="rounded-lg lg:w-[300px] lg:h-[300px]"
+        />
+        <button className="mt-2 text-lg p-3 rounded-full border-2 font-bold">{title}</button>
+      </div>
+    </Link>
     )
 }
 

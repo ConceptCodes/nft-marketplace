@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import useTranslation from 'next-translate/useTranslation';
 import { ConnectWallet } from '@thirdweb-dev/react';
+import Icon from './Icon';
 
 const Navbar: React.FC = () => {
   const { t } = useTranslation('common');
@@ -16,8 +17,9 @@ const Navbar: React.FC = () => {
       </div>
       <div className="flex space-x-4 items-center">
         <input type="text" placeholder="Search" className="border-2 text-black focus:border-primary border-gray-200 rounded-full w-96" />
-        <Link href="/upload" className="rounded-full w-32 p-3 text-center bg-primary-600 text-white font-bold">
+        <Link href="/upload" className="rounded-full flex w-32 p-3 text-center bg-primary-600 text-white font-bold">
           {t('navbar.links.upload')}
+          <Icon name="upload" color="white" />
         </Link>
         <ConnectWallet
           auth={{

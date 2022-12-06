@@ -2,7 +2,7 @@ import '../styles/globals.css';
 import type { AppProps } from 'next/app';
 import { ChainId, ThirdwebProvider } from '@thirdweb-dev/react';
 import Navbar from '../components/Navbar';
-
+import Footer from '../components/Footer';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -15,7 +15,8 @@ function MyApp({ Component, pageProps }: AppProps) {
   >
     <div className="flex min-h-screen flex-col">
       <Navbar />
-      <Component {...pageProps} />
+        <Component {...pageProps} />
+      <Footer />
     </div>
   </ThirdwebProvider>
   );
